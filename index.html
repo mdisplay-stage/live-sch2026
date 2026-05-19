@@ -23,7 +23,7 @@
   <body>
     <div
       id="app"
-      :class="[{'is-showing-alert': showAlert, 'analog-clock-active': analogClockActive, 'is-active': currentPrayer, 'is-waiting': currentPrayerWaiting, 'is-before': currentPrayerBefore, 'is-after': currentPrayerAfter, 'focus-active-timer': currentPrayer && focusActiveTimer}, 'active-prayer-info-' + prayerInfo, 'analog-clock-theme-' + analogClockTheme, 'digital-clock-theme-' + digitalClockTheme]"
+      :class="[{'is-showing-alert': showAlert, 'analog-clock-active': analogClockActive, 'is-active': currentPrayer, 'is-waiting': currentPrayerWaiting, 'is-before': currentPrayerBefore, 'is-after': currentPrayerAfter, 'focus-active-timer': true || currentPrayer && focusActiveTimer}, 'active-prayer-info-' + prayerInfo, 'analog-clock-theme-' + analogClockTheme, 'digital-clock-theme-' + digitalClockTheme]"
     >
     
       <div v-show="true" v-if="isDevDebugging" style="display: none; background: red; position: fixed; z-index: 999999999999;">{{ devDebugMessage }}</div>
@@ -49,6 +49,32 @@
           </div>
         </div>
       </div>
+
+      <div id="sch2026">
+        <!-- Scholarship 2026 -->
+        <div class="units-title">
+            {{ translate('sch2026.title') }}
+        </div>
+         <div class="units-container">
+         <div class="units days">
+            <div class="num">{{ sch2026.days }}</div>
+            <div class="lbl">{{ translate('sch2026.days') }}</div>
+         </div>
+         <div class="units hours">
+            <div class="num">{{ sch2026.hours }}</div>
+            <div class="lbl">{{ translate('sch2026.hours') }}</div>
+         </div>
+         <div class="units minutes">
+            <div class="num">{{ sch2026.minutes }}</div>
+            <div class="lbl">{{ translate('sch2026.minutes') }}</div>
+         </div>
+         <div class="units seconds">
+            <div class="num">{{ sch2026.seconds }}</div>
+            <div class="lbl">{{ translate('sch2026.seconds') }}</div>
+         </div>
+         </div>
+      </div>
+
       <div style="display: none" v-show="true">
 
       <div id="active-overlay"></div>

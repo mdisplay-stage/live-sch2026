@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship 2026 Countdown</title>
+    <link rel="stylesheet" href="simplyCountdown/themes/circle.css" />
+    <style type="text/css">
+        html, body {
+            background: #000;
+            color: #fff;
+        }
+        .container {
+
+        }
+        .my-super-countdown {
+            height: 130px;
+            top: 50%;
+            position: absolute;
+            width: 100%;
+            margin-top: -65px;
+        }
+        .simply-countdown-circle .simply-amount {
+            font-size: 2.75rem;
+            background: transparent;
+            -webkit-text-fill-color: inherit;
+        }
+        .simply-countdown-circle > .simply-section {
+            width: 150px;
+            height: 150px;
+        }
+        .my-super-countdown {
+            height: 180px;
+            margin-top: -90px;
+        }
+        .simply-countdown-circle .simply-amount {
+            font-weight: normal;
+        }
+        .simply-countdown-circle .simply-hours-section {
+            width: 125px;
+            height: 125px;
+        }
+        .simply-countdown-circle .simply-minutes-section {
+            width: 100px;
+            height: 100px;
+        }
+        .simply-countdown-circle .simply-seconds-section {
+            width: 100px;
+            height: 100px;
+        }
+        .simply-countdown-circle .simply-seconds-section .simply-amount {
+            color: #ff4b4b;
+            font-weight: normal;
+        }
+        .simply-countdown-circle .simply-hours-section .simply-amount {
+            font-size: 4rem;
+        }
+        .simply-countdown-circle .simply-minutes-section .simply-amount {
+            font-size: 3rem;
+        }
+        .simply-countdown-circle .simply-days-section .simply-amount {
+            font-size: 5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+weewe2
+<div class="container">
+    <div class="my-super-countdown simply-countdown-circle"></div>
+</div>
+<script src="simplyCountdown/simplyCountdown.umd.js"></script>
+<script>
+    simplyCountdown(".my-super-countdown", {
+        year: 2026,
+        month: 8,
+        day: 9,
+        hours: 8,
+        minutes: 30,
+    });
+</script>
+</body>
+</html>

@@ -261,6 +261,12 @@ function App() {
     isWifiScanning: false,
     wifiScanResults: [],
     rememberWifiEditLocked: true,
+    sch2026: {
+      days: 2,
+      hours: 13,
+      minutes: 22,
+      seconds: 57,
+    },
   };
   self.computed = {
     showAlert: function () {
@@ -1241,6 +1247,7 @@ function App() {
       self.analogClock.nextTick(self.data.time);
     }
     self.commitCurrentPrayer();
+    self.updateSch2026();
   };
   self.forceTimeUpdate = function (newDate) {
     self.data.time = newDate;
@@ -2030,6 +2037,7 @@ function App() {
       self.data.devDebugMessage = 'bringtofront YES!';
       setTimeout(function() {
         window.plugins.bringtofront();
+        self.data.devDebugMessage = '';
       }, 10 * 1000);
     } else {
       self.data.devDebugMessage = 'bringtofront NOT available!';
@@ -2057,6 +2065,21 @@ function App() {
         self.data.showWifiScan = false;
     });
   };
+  self.updateSch2026 = function() {
+    var sch2026Date = new Date(2026, 7, 8, 8, 30, 0, 0);
+    // var d = moment(self.time);
+    var diffTime = sch2026Date.getTime() - (new Date()).getTime();
+    var duration = moment.duration(diffTime, 'milliseconds');
+    // var d = new Date();
+    // duration = moment.duration(duration, 'milliseconds');
+
+    self.data.sch2026 = {
+      days: Math.floor(duration.asDays()),
+      hours: duration.hours(),
+      minutes: duration.minutes(),
+      seconds: duration.seconds(),
+    }
+  }
   self.init = function (initialTestTime, callback, analogClock) {
     self.initialTestTime = initialTestTime;
     self.analogClock = analogClock;

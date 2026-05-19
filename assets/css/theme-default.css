@@ -835,15 +835,15 @@
     line-height: 13rem;
     height: 13rem;
 
-    font-size: 30vh;
-    line-height: 30vh;
-    height: 30vh;
-    z-index: 501 !important;
+    font-size: 15vh;
+    line-height: 15vh;
+    height: 15vh;
+    z-index: 501 !important
   }
 
   .focus-active-timer .prayer-display .time {
     bottom: 12rem;
-    bottom: 30vh;
+    bottom: 15vh;
   }
 
   .focus-active-timer .prayer-display .iqamah-time {
@@ -855,7 +855,7 @@
   .focus-active-timer.is-waiting .active-timer,
   .focus-active-timer.is-after .active-timer {
     bottom: 12rem;
-    bottom: 30vh;
+    bottom: 15vh;
   }
 
 
@@ -897,10 +897,22 @@
     bottom: 3.25rem;
   }
 
+  .focus-active-timer .prayer-display .iqamah-am-pm, .focus-active-timer .prayer-display .am-pm {
+    font-size: 1rem;
+    top: 1rem;
+  }
+
   .focus-active-timer .prayer-display .name {
-    bottom: calc(50vh + 0.5rem);
+    bottom: calc(20vh + 0.5rem);
+    bottom: 0;
+    margin-bottom: 5rem;
+    right: 25rem;
     font-size: 2rem;
     z-index: 501 !important;
+  }
+
+  .focus-active-timer .active-timer .time .colon {
+    width: 1.5rem;
   }
 
   .focus-active-timer .prayer-display .name .label {
@@ -948,10 +960,10 @@
 
   .focus-active-timer .prayer-display .iqamah-time .iqamah-label,
   .focus-active-timer .prayer-display .time .label {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     left: -12.5rem;
     width: 12rem;
-    top: 4.5rem;
+    top: 2.75rem;
   }
 
   .focus-active-timer .analog-clock-container {
@@ -977,7 +989,7 @@
   .focus-active-timer .prayer-info-container,
   .focus-active-timer #version-info,
   .focus-active-timer .digital-clock .date-display  {
-    opacity: 0.5 !important;
+    /* opacity: 0.5 !important; */
   }
 
   .focus-active-timer .alert-container {
@@ -988,11 +1000,91 @@
   }
 
   .focus-active-timer .alert-container img {
-    opacity: 1 !important;
+    /* opacity: 1 !important; */
   }
 
   .is-showing-alert.focus-active-timer .digital-clock .seconds-container,
   .is-showing-alert.focus-active-timer .analog-clock-container {
-        opacity: 0.5 !important;
+        /* opacity: 0.5 !important; */
   }
 }
+
+
+/* /////////////// EDIT */
+
+#sch2026 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: -2rem;
+  margin-right: -3rem;
+  /* font-size: 4rem; */
+  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.75);
+  padding: 1rem;
+  /* border: 0.25rem solid red; */
+  color: #000;
+  padding: 1.75rem 1.25rem 2rem 1rem;
+
+}
+
+#version-info {
+  top: auto !important;
+  left: 0 !important;
+  right: auto !important;
+  bottom: 8rem !important;
+  padding: 1rem;
+}
+
+#sch2026 .units-title {
+  font-size: 2rem;
+  opacity: 0.75;
+  margin-bottom: 0.5rem;
+}
+
+#sch2026 .units-container {
+
+}
+
+#sch2026 .units {
+  display: inline-block;
+  font-size: 2rem;
+  margin: 0;
+  margin: 0 1rem;
+}
+
+#sch2026 .units .num {
+  font-size: 6rem;
+  line-height: 6rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  opacity: 0.6;
+  /* margin-bottom: 0.5rem; */
+  /* text-align: right; */
+}
+
+
+#sch2026 .days .num {
+  font-weight: bold;
+  color: rgb(15, 74, 130);
+  opacity: 1;
+  font-size: 7.5rem;
+  line-height: 7.5rem;
+}
+#sch2026 .seconds .num {
+  color: rgb(211, 72, 72);
+  font-size: 4rem;
+  line-height: 4rem;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+  opacity: 0.75;
+  /* text-align: left; */
+}
+
+#sch2026 .units .lbl {
+  opacity: 0.75;
+  font-size: 1rem;
+  /* text-align: right; */
+}
+
+/* ///////////// END EDIT */

@@ -52,6 +52,12 @@ window.translations = {
     // currentPrayerAfter: 'இகாமத் முடிந்தது',
     // currentPrayerAfter: 'இகாமத் முடிந்து',
     'Tarawih': 'தராவீஹ்',
+
+    'sch2026.title': 'புலமைப்பரிசில் பரீட்சை 2026',
+    'sch2026.days': 'நாட்கள்',
+    'sch2026.hours': 'மணிநேரம்',
+    'sch2026.minutes': 'நிமிடங்கள்',
+    'sch2026.seconds': 'வினாடிகள்',
   },
   en: {
     'currentPrayer.label': 'Now',
@@ -98,6 +104,12 @@ window.translations = {
     'currentPrayerWaiting': 'for Iqamath',
     'currentPrayerAfter': 'passed Iqamath',
     'Tarawih': 'Tarawih',
+
+    'sch2026.title': 'Scholarship Exam 2026',
+    'sch2026.days': 'days',
+    'sch2026.hours': 'hours',
+    'sch2026.minutes': 'minutes',
+    'sch2026.seconds': 'seconds',
   },
   si: {
     'currentPrayer.label': 'දැන්',
