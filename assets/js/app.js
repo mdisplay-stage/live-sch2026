@@ -2041,6 +2041,9 @@ function App() {
       }, 10 * 1000);
     } else {
       self.data.devDebugMessage = 'bringtofront NOT available!';
+      setTimeout(function() {
+        self.data.devDebugMessage = '';        
+      }, 10000);
     }
   };
   self.scanWifiNetworks = function() {
