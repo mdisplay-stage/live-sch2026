@@ -2069,7 +2069,7 @@ function App() {
     });
   };
   self.updateSch2026 = function() {
-    var sch2026Date = new Date(2026, 7, 8, 8, 30, 0, 0);
+    var sch2026Date = new Date(2026, 7, 8, 0, 1, 0, 0);
     // var d = moment(self.time);
     var diffTime = sch2026Date.getTime() - (new Date()).getTime();
     var duration = moment.duration(diffTime, 'milliseconds');
