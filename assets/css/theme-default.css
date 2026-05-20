@@ -1039,7 +1039,7 @@
 #sch2026 .units-title {
   font-size: 2rem;
   opacity: 0.75;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 #sch2026 .units-container {
@@ -1069,13 +1069,13 @@
   color: rgb(15, 74, 130);
   opacity: 1;
   font-size: 7.5rem;
-  line-height: 7.5rem;
+  line-height: 6.5rem;
 }
 #sch2026 .seconds .num {
   color: rgb(211, 72, 72);
   font-size: 4rem;
-  line-height: 4rem;
-  margin-bottom: 0.5rem;
+  line-height: 4.5rem;
+  /* margin-bottom: 0.5rem; */
   font-weight: normal;
   opacity: 0.75;
   /* text-align: left; */
