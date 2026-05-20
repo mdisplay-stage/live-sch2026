@@ -2076,11 +2076,13 @@ function App() {
     // var d = new Date();
     // duration = moment.duration(duration, 'milliseconds');
 
+    var seconds = duration.seconds();
+
     self.data.sch2026 = {
       days: Math.floor(duration.asDays()),
       hours: duration.hours(),
       minutes: duration.minutes(),
-      seconds: duration.seconds(),
+      seconds: seconds,
     }
   }
   self.init = function (initialTestTime, callback, analogClock) {
