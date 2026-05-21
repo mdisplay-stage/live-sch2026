@@ -2069,10 +2069,12 @@ function App() {
     });
   };
   self.updateSch2026 = function() {
-    var sch2026Date = new Date(2026, 7, 8, 0, 1, 0, 0);
+    var nowTime = self.data.time.getTime();
+    var sch2026Date = new Date(2026, 7, 8, 8, 31, 0, 0);
+    var sch2026Time = sch2026Date.getTime();
     // var d = moment(self.time);
     var diffTime = sch2026Date.getTime() - (new Date()).getTime();
-    var duration = moment.duration(diffTime, 'milliseconds');
+    var duration = moment.duration(sch2026Time - nowTime, 'milliseconds');
     // var d = new Date();
     // duration = moment.duration(duration, 'milliseconds');
 
@@ -2081,8 +2083,8 @@ function App() {
     self.data.sch2026 = {
       days: Math.floor(duration.asDays()),
       hours: duration.hours(),
-      minutes: duration.minutes(),
-      seconds: seconds,
+      minutes: duration.minutes() - (seconds === 0 ? 1 : 0),
+      seconds: seconds || '',
     }
   }
   self.init = function (initialTestTime, callback, analogClock) {
