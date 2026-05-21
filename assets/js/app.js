@@ -2069,8 +2069,9 @@ function App() {
     });
   };
   self.updateSch2026 = function() {
+    var noChangeInSeconds = true; // (self.data.currentPrayerWaiting || self.data.currentPrayerBefore || self.data.currentPrayerAfter);
     var nowTime = self.data.time.getTime();
-    var sch2026Date = new Date(2026, 7, 8, 8, 31, 0, 0);
+    var sch2026Date = new Date(2026, 7, 8, 8, 31, noChangeInSeconds ? 0 : 1, 0);
     var sch2026Time = sch2026Date.getTime();
     // var d = moment(self.time);
     var diffTime = sch2026Date.getTime() - (new Date()).getTime();
@@ -2083,8 +2084,8 @@ function App() {
     self.data.sch2026 = {
       days: Math.floor(duration.asDays()),
       hours: duration.hours(),
-      minutes: duration.minutes() - (seconds === 0 ? 1 : 0),
-      seconds: seconds || '',
+      minutes: duration.minutes() - (!noChangeInSeconds && seconds === 0 ? 1 : 0),
+      seconds: seconds,
     }
   }
   self.init = function (initialTestTime, callback, analogClock) {
