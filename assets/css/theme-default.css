@@ -1066,15 +1066,18 @@
 
 #sch2026 .days .num {
   font-weight: bold;
-  color: rgb(15, 74, 130);
+  color: rgb(211, 72, 72);
+  color: #c42525;
   opacity: 1;
   font-size: 7.5rem;
   line-height: 6.5rem;
 }
 #sch2026 .seconds .num {
   color: rgb(211, 72, 72);
-  font-size: 4rem;
-  line-height: 4.5rem;
+  color: rgb(15, 74, 130);
+  color: rgb(0, 0, 0);
+  font-size: 3rem;
+  line-height: 4rem;
   /* margin-bottom: 0.5rem; */
   font-weight: normal;
   opacity: 0.75;
