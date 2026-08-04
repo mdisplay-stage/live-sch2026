@@ -1029,8 +1029,10 @@
 }
 
 .is-even #sch2026 {
-  background: rgb(255 208 208 / 75%);
+  background: #000;
+  color: #FFF;
   border: 0.5rem solid red;
+  border-width: 0 0 0.5rem 0.5rem;
 }
 
 #version-info {
@@ -1068,11 +1070,14 @@
   /* text-align: right; */
 }
 
+.is-even #sch2026 .units .num {
+  color: #FFF;
+}
 
 #sch2026 .days .num {
   font-weight: bold;
   color: rgb(211, 72, 72);
-  color: #c42525;
+  color: #c42525 !important;
   opacity: 1;
   font-size: 7.5rem;
   line-height: 6.5rem;
@@ -1087,6 +1092,9 @@
   font-weight: normal;
   opacity: 0.75;
   /* text-align: left; */
+}
+.is-even #sch2026 .seconds .num {
+  color: #FFF;
 }
 
 #sch2026 .units .lbl {
