@@ -1028,6 +1028,11 @@
 
 }
 
+.is-even #sch2026 {
+  background: rgb(255 208 208 / 75%);
+  border: 0.5rem solid red;
+}
+
 #version-info {
   top: auto !important;
   left: 0 !important;

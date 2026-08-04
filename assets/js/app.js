@@ -267,6 +267,7 @@ function App() {
       minutes: 22,
       seconds: 57,
     },
+    evenOrOdd: 'even',
   };
   self.computed = {
     showAlert: function () {
@@ -1154,6 +1155,7 @@ function App() {
         );
       }
     }
+
     if (self.data.time.getSeconds() % 2 === 0) {
       self.data.prayerInfo = self.data.prayerInfo === 'athan' ? 'iqamah' : 'athan';
       if (self.data.prayerInfo === 'iqamah') {
@@ -1165,6 +1167,9 @@ function App() {
           }
         }, 2000);
       }
+      self.data.evenOrOdd = 'even';
+    } else {
+      self.data.evenOrOdd = 'odd';
     }
     var nowTime = self.data.time.getTime();
     var nextTime = self.data.nextPrayer ? self.data.nextPrayer.time.getTime() : 0;
@@ -2071,7 +2076,7 @@ function App() {
   self.updateSch2026 = function() {
     var noChangeInSeconds = true; // (self.data.currentPrayerWaiting || self.data.currentPrayerBefore || self.data.currentPrayerAfter);
     var nowTime = self.data.time.getTime();
-    var sch2026Date = new Date(2026, 7, 7, 0, 0, noChangeInSeconds ? 0 : 1, 0);
+    var sch2026Date = new Date(2026, 7, 8, 0, 0, noChangeInSeconds ? 0 : 1, 0);
     var sch2026Time = sch2026Date.getTime();
     // var d = moment(self.time);
     var diffTime = sch2026Date.getTime() - (new Date()).getTime();

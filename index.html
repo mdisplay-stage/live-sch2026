@@ -23,7 +23,7 @@
   <body>
     <div
       id="app"
-      :class="[{'is-showing-alert': showAlert, 'analog-clock-active': analogClockActive, 'is-active': currentPrayer, 'is-waiting': currentPrayerWaiting, 'is-before': currentPrayerBefore, 'is-after': currentPrayerAfter, 'focus-active-timer': true || currentPrayer && focusActiveTimer}, 'active-prayer-info-' + prayerInfo, 'analog-clock-theme-' + analogClockTheme, 'digital-clock-theme-' + digitalClockTheme]"
+      :class="['is-' + evenOrOdd, {'is-showing-alert': showAlert, 'analog-clock-active': analogClockActive, 'is-active': currentPrayer, 'is-waiting': currentPrayerWaiting, 'is-before': currentPrayerBefore, 'is-after': currentPrayerAfter, 'focus-active-timer': true || currentPrayer && focusActiveTimer}, 'active-prayer-info-' + prayerInfo, 'analog-clock-theme-' + analogClockTheme, 'digital-clock-theme-' + digitalClockTheme]"
     >
     
       <div v-show="true" v-if="isDevDebugging" style="display: none; background: red; position: fixed; z-index: 999999999999;">{{ devDebugMessage }}</div>
